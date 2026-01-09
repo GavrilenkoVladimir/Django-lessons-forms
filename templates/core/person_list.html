@@ -7,5 +7,6 @@
     <li>{{ person.full_name }} (birth: {{ person.birth_year }})</li>
   {% endfor %}
   </ul>
+  <a href="{% url "core:person-create" %}">Create</a>
 
 {% endblock %}
