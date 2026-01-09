@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Person list</h1>
+  <ul>
+  {% for person in person_list %}
+    <li>{{ person.full_name }} (birth: {{ person.birth_year }})</li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}
