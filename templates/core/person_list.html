@@ -4,7 +4,10 @@
   <h1>Person list</h1>
   <ul>
   {% for person in person_list %}
-    <li>{{ person.full_name }} (birth: {{ person.birth_year }})</li>
+    <li>{{ person.full_name }} (birth: {{ person.birth_year }})
+    {% if person.hobby %}, hobby: {{ person.hobby }}
+    {% endif %}
+    </li>
   {% endfor %}
   </ul>
   <a href="{% url "core:person-create" %}">Create</a>

@@ -1,20 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Create person</h1>
-  {% if error %}
-  	<p>{{ error }}</p>
-  {% endif %}
-  <form action="" method="post">
-  {% csrf_token %}
-    <label>Full name
-    <input type="text" name="full_name">
-      </label>
-    <br>
-    <label>Birth year
-    <input type="number" name="birth_year">
-      </label>
-    <br>
+  <h1>Create person</h1>
+  <form action="" method="post" novalidate>
+    {% csrf_token %}
+    {{ form.as_p }}
     <input type="submit" value="submit">
+
   </form>
 {% endblock %}
